@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900&display=swap');
 
 :root {
-    --main-accent-color: #03bad5;
-    --section-title-color-dark: #37474f;
+    --main-accent-color: #F4C414;
+    --section-title-color-dark: #242424;
     --body-color: #495057;
 }
 
@@ -39,6 +39,10 @@ h1 {
     border: 2px solid #ffffff;
 }
 
+.sections{
+    transition: all .4s;
+}
+
 /* Section title */
 .section-title {
     position: relative;
@@ -49,7 +53,7 @@ h2.section-title-heading {
     padding-top: 2rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .section-title::after {
@@ -69,12 +73,35 @@ h2.section-title-heading {
 }
 
 
+/* ============ IMAGENS =============== */
+
+img[data-src] {
+    opacity: 0;
+    transform: scale(0);
+}
+
+img[src] {
+    opacity: 1;
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
 
 /* ============ NAVIGATION =============== */
 
 .navbar {
     padding-top: 1.2rem;
     transition: 1s;
+}
+
+.navbar-brand img{
+    width: 150px;
+    transition: .3s ease-in-out;
+}
+
+.fa-bars{
+    color:#fff; 
+    border:none; 
+    font-size:28px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -94,6 +121,10 @@ h2.section-title-heading {
     color: #F4C414;
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;..");
+}
+
 
 
 .navbar.active{
@@ -103,28 +134,23 @@ h2.section-title-heading {
     color: white;
 }
 
-.navbar-brand img{
-    width: 100px;
-}
-
-
 /* ============ HERO =============== */
 
-#inicio {
-    background-image: linear-gradient(to right, rgba(20,20,22, 0.62), rgba(52,70,108, 0.52)), url('../img/hero-bg.jpg');
+#start {
+    background-image: linear-gradient(to right, rgba(0,0,0), rgba(0,0,0,0.9),  rgba(0,0,0, 0.8)), url('../img/hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8rem;
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
     position: relative;
 }
 
-#inicio::after {
+#start::after {
     content: '';
     position: absolute;
     background-color: #ffffff;
     width: 100%;
-    height: 15%;
+    height: 14%;
     transform: skewY(-2deg);
     transform-origin: bottom right;
     bottom: 0;
@@ -157,6 +183,7 @@ h2.section-title-heading {
 
 #about i {
     color: var(--main-accent-color);
+    padding: 4%;
 }
 
 #about h3 {
@@ -172,90 +199,68 @@ h2.section-title-heading {
     line-height: 1.7rem;
 }
 
-#about {
-    position: relative;
-    padding-bottom: 8rem;
-}
+/* ============ Services =============== */
 
-#about::after {
-    content: '';
-    position: absolute;
-    background-color: #fafafa;
-    width: 100%;
-    height: 15%;
-    transform: skewY(-2deg);
-    transform-origin: bottom right;
-    bottom: -50px;
-    right: 0;
-    left: 0;
-}
-
-/* ============ FEATURES =============== */
-
-#features {
-    background-color: #fafafa;
+#services {
+    background-color: #e2e2e2;
     padding-bottom: 6rem;
-    margin-top: 3rem;
+    padding-top: 4rem;
+    margin-top: 6rem;
 }
 
-#features img {
+#services .device img {
+    margin-top: 50%;
+}
+
+#services img {
     display: block;
     margin: 0 auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    position:relative;
 }
 
-#features .feature-block {
+#services .service-block {
     text-align: center;
 }
 
-#features .feature-block h3 {
+#services .service-block h3 {
     color: var(--section-title-color-dark);
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-#features .feature-block img {
+#services .service-block img {
     padding-bottom: 1rem;
 }
 
-#features .feature-block p {
+#services .service-block p {
     color: var(--body-color);
     font-size: 1rem;
     line-height: 1.7rem;
 }
 
-/* ============ DOWNLOAD =============== */
+/* ============ PHOTOS CARS =============== */
 
-#download {
-    background-image: linear-gradient(to right, rgba(0,172,217, 0.62), rgba(105,240,174, 0.52)), url('../img/download.jpg');
+
+#photoscars {
+    background-image: linear-gradient(to right, rgba(0, 0, 0), rgba(0,0,0, 0.8)), url('../img/photoscar.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 15rem;
     position: relative;
 }
 
-#download::before {
-    content: '';
-    position: absolute;
-    background-color: #fafafa;
-    width: 100%;
-    height: 20%;
-    transform: skewY(-2deg);
-    transform-origin: top right;
-    top: -6rem;
-    right: 0;
-    left: 0;
-}
-
-#download .download-title h2 {
+#photoscars .photoscars-title h2 {
     padding-top: 10rem;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-#download .download-title p {
+#photoscars .photoscars-title p {
     color: #ffffff;
     text-align: center;
     font-size: 1.2rem;
@@ -263,11 +268,7 @@ h2.section-title-heading {
     margin-top: 2.5rem;
 }
 
-#download .download-title .download-btns {
-    margin-top: 4rem;
-}
-
-#download .download-title .download-btns a {
+#photoscars .photoscars-title .photoscars-btns a {
     border: 2px solid #ffffff;
     border-radius: 2rem;
     color: #ffffff;
@@ -276,132 +277,92 @@ h2.section-title-heading {
     padding: .8rem 2rem;
 }
 
-#download .download-title .download-btns a:hover {
-    background-color: #ffffff;
-    color: var(--main-accent-color);
-    border: 2px solid #ffffff;
-    text-decoration: none;
-}
-
-
-/* ============ PRICING =============== */
-
-#pricing {
-    padding-bottom: 7rem;
-    position: relative;
-}
-
-#pricing::before {
-    content: '';
+.btnphotos{
     position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    height: 20%;
-    transform: skewY(-2deg);
-    transform-origin: top right;
-    top: -6rem;
-    right: 0;
-    left: 0;
+    z-index: 99;
+    top: 40%;
+    right: 2%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 48px;
 }
 
-#pricing .section-title {
-    margin-bottom: 5rem;
-}
-
-#pricing .pricing-table {
-    background-color: #ffffff;
-    box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
-    -webkit-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
-    -moz-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
-    -o-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
-    margin-right: 1rem;
-    width: calc(90% / 3);
-    padding-left: 0;
-    padding-right: 0;
-}
-
-#pricing .pricing-table .table-header h4 {
-    color: var(--section-title-color-dark);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-#pricing .pricing-table .table-content {
-    margin-top: 2rem;
-}
-
-#pricing .pricing-table .table-content ul li {
-    list-style: none;
-    text-align: center;
-    padding-bottom: 1rem;
-    font-weight: 600;
-}
-
-#pricing .pricing-table .table-footer {
-    margin-top: 2rem;
-    padding-bottom: 3rem;
-}
-
-#pricing .pricing-table .table-footer a {
-    background: linear-gradient(to right, rgba(0,172,217, 0.62), rgba(105,240,174, 0.52));
-    padding: .8rem 2rem;
-    border-radius: 2rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-#pricing .pricing-table .table-footer a:hover {
-    text-decoration: none;
-    background: #ffffff;
-    color: rgba(0,172,217, 0.62);
-    border: 2px solid rgba(0,172,217, 0.62);
-}
-
-#pricing .table-header {
-    margin: 0;
-    width: 100%;
-}
-
-#pricing .pricing-table .table-header {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-}
-
-#pricing .pricing-table:nth-child(2) .table-header {
-    background: linear-gradient(to right, rgba(0,172,217, 0.62), rgba(105,240,174, 0.52));
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-    color: #ffffff;
-    position: relative;
-}
-
-#pricing .pricing-table:nth-child(2) .table-header img {
+/* #btnprevious{
     position: absolute;
-    left: 5px;
-    top: 5px;
+    z-index: 99;
+    top: 40%;
+    right: 2%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
 }
 
-#pricing .pricing-table:nth-child(2) .table-header h4 {
+#btnnext{
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    left: 2%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+} */
+
+.miniaturas{
+    margin: .6rem;
+}
+
+.miniaturas img{
+    max-width: 150px;
+    border: solid #F4C414 1px;
+    transition: .3s;
+    cursor: pointer;
+    position:relative;
+    -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+    filter: gray;
+}
+
+.miniaturas img:hover{
+    -webkit-filter: none;	
+    filter: none;	
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* ============ ZOOM IMG =============== */
+
+#popup {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 50px 2px #000;
+    padding-bottom: 5px;
+  }
+  #close {
+    width: 100px;
+    background-color: #cc0033;
     color: #ffffff;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
+    border: none;
+    margin-left: 5px;
+  }
 
 /* ============ Contact =============== */
 #contact {
-    background-color: #f0f1f3;
-    padding-bottom: 5rem;
-    padding-top: 8rem;
+    background-color: #e2e2e2;
+    padding-bottom: 10rem;
+    padding-top: 1rem;
     position: relative;
 }
 
 #contact::before {
     content: '';
     position: absolute;
-    background-color: #ffffff;
+    background-color: #E2E2E2;
     width: 100%;
     height: 20%;
     transform: skewY(-2deg);
@@ -412,18 +373,18 @@ h2.section-title-heading {
 }
 
 .btn-contact {
-    background: linear-gradient(to right, rgba(0,172,217, 0.62), rgba(105,240,174, 0.52));
+    background: #000;
     padding: .5rem 2.2rem;
-    color: #ffffff;
+    color: #F4C414;
     font-weight: 600;
     border-radius: 2rem;
-    border: none;
+    border: 2px solid #000;
 }
 
 .btn-contact:hover {
     background: #ffffff;
-    color: rgba(0,172,217, 0.62);
-    border: 2px solid rgba(0,172,217, 0.62);
+    color: #000;
+    border: 2px solid #F4C414;
 }
 
 #contact .contact-details ul li {
@@ -431,13 +392,14 @@ h2.section-title-heading {
 }
 
 #contact .contact-details ul li i {
-    color: rgba(0,172,217, 0.62);
+    color: #F4C414;
+    font-size: 1.2rem;
 }
 
 /* ============ Footer =============== */
 #footer {
     background-color: #2b323f;
-    padding-top: 6rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     position: relative;
 }
@@ -447,7 +409,7 @@ h2.section-title-heading {
     position: absolute;
     background-color: #2b323f;
     width: 100%;
-    height: 45%;
+    height: 32%;
     transform: skewY(-2deg);
     transform-origin: top right;
     top: -5.5rem;
@@ -455,8 +417,17 @@ h2.section-title-heading {
     left: 0;
 }
 
+.social-icons{
+    font-size: 24px;
+}
+
 #footer .footer-logo img {
     margin-top: -4.5rem;
+}
+
+.footer-logo img {
+    padding: 70px 0px 30px 0px;
+    max-width: 250px;
 }
 
 #footer .social-icons {

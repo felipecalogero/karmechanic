@@ -14,8 +14,8 @@
         display: none;
     }
 
-    /* Features section */
-    #features .device img {
+    /* Services section */
+    #services .device img {
         margin-bottom: 2rem;
     }
 
@@ -27,6 +27,11 @@
     /* footer section */
     .footer-logo {
         margin-top: -1rem;
+    }
+
+    /* Services section */
+    #services img {
+        max-width: 300px;
     }
 
 }
@@ -48,21 +53,9 @@
         padding-bottom: 2rem;
     }
 
-    /* Features section */
-    #features {
+    /* Services section */
+    #services {
         margin-top: 0;
     }
-
-    /* Pricing section */
-    #pricing .pricing-table {
-        width: calc(80% / 1);
-        margin-top: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #pricing .pricing-table:nth-child(1) {
-        margin-top: -2rem;
-    }
-
+    
 }
