@@ -309,6 +309,7 @@ img[src] {
 
 .miniaturas{
     margin: .6rem;
+    display: inline-block;
 }
 
 .miniaturas img{
@@ -316,7 +317,6 @@ img[src] {
     border: solid #F4C414 1px;
     transition: .3s;
     cursor: pointer;
-    position:relative;
     -webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
     filter: gray;
