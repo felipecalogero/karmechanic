@@ -287,32 +287,13 @@ img[src] {
     font-size: 48px;
 }
 
-/* #btnprevious{
-    position: absolute;
-    z-index: 99;
-    top: 40%;
-    right: 2%;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-#btnnext{
-    position: absolute;
-    z-index: 99;
-    top: 40%;
-    left: 2%;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-} */
-
 .miniaturas{
-    margin: .6rem;
     display: inline-block;
 }
 
 .miniaturas img{
+    margin: 1rem;
+
     max-width: 150px;
     border: solid #F4C414 1px;
     transition: .3s;
@@ -331,25 +312,6 @@ img[src] {
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
-
-/* ============ ZOOM IMG =============== */
-
-#popup {
-    position: absolute;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 50px 2px #000;
-    padding-bottom: 5px;
-  }
-  #close {
-    width: 100px;
-    background-color: #cc0033;
-    color: #ffffff;
-    border: none;
-    margin-left: 5px;
-  }
 
 /* ============ Contact =============== */
 #contact {

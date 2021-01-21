@@ -21,12 +21,12 @@ function ativaNoScroll() {
 
 window.addEventListener('scroll', ativaNoScroll);
 
-$('.navbar-nav a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
-	}, 500);
+// POPUP
+
+$(document).ready(function() {
+    $('.gallery').magnificPopup({
+        delegate: 'a', // child items selector, by clicking on it popup will open
+        type: 'image',
+        gallery:{enabled:true}
+    });  
 });
