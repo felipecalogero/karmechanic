@@ -1,8 +1,13 @@
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
     .navbar-collapse {
-        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0,.6);
+        text-align: center;
         padding-left: 1rem;
+    }
+
+    .image-box img {
+        left: 0rem;
     }
 
 }
@@ -17,6 +22,11 @@
     /* Services section */
     #services .device img {
         margin-bottom: 2rem;
+    }
+
+    /* About section */
+    #about{
+        margin-bottom: 6rem;
     }
 
     /* Contact section */

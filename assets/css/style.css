@@ -44,6 +44,7 @@ h1 {
 }
 
 /* Section title */
+
 .section-title {
     position: relative;
 }
@@ -175,6 +176,7 @@ img[src] {
 
 .image-box img {
     position: absolute;
+    left: 6rem;
     top: 4rem;
     z-index: 1;
 }
